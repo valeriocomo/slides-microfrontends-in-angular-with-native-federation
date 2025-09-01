@@ -49,3 +49,8 @@ src: ./pages/00-about-me/about-me.md
 transition: slideup
 ---
 
+---
+src: ./pages/01-agenda/agenda.md
+transition: slideup
+---
+
