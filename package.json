@@ -1,6 +1,7 @@
 {
   "name": "microfrontends-in-angular-with-native-federation",
   "type": "module",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "slidev build",
@@ -10,9 +11,14 @@
     "d": "slidev --bind 172.17.0.2:3030 --open"
   },
   "dependencies": {
+    "@iconify-json/skill-icons": "^1.2.3",
     "@slidev/cli": "^52.1.0",
+    "@slidev/theme-apple-basic": "^0.25.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.55.0"
   }
 }
