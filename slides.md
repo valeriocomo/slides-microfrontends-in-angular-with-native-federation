@@ -54,3 +54,8 @@ src: ./pages/01-agenda/agenda.md
 transition: slideup
 ---
 
+---
+src: ./pages/02-what-mf-are/what-mf-are.md
+transition: slideup
+---
+
