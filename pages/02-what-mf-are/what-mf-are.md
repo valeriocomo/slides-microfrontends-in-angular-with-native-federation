@@ -19,7 +19,7 @@ layout: fact
 
 ---
 layout: image
-image: '/pages/02-what-mf-are/new-php-logo.png'
+image: '/images/new-php-logo.png'
 ---
 ---
 layout: bullets
@@ -37,12 +37,12 @@ layout: bullets
 
 ---
 layout: image
-image: '/pages/02-what-mf-are/from-mono-to-ms.png'
+image: '/images/from-mono-to-ms.png'
 ---
 ### credits: Michael Geers | https://micro-frontends.org
 ---
 layout: image
-image: '/pages/02-what-mf-are/end-to-end-with-mf.png'
+image: '/images/end-to-end-with-mf.png'
 ---
 
 ---
