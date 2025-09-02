@@ -10,7 +10,7 @@ layout: bullets
 
 # Agenda
 
-* Intro
+* What are Microfrontend? 
 * Microfrontend
 * Multi-version & multi-framework
 * Native Federation 
