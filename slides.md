@@ -63,4 +63,10 @@ transition: slideup
 ---
 src: ./pages/03-mf-in-angular/mf-in-angular.md
 transition: slideup
+--- 
+
 ---
+src: ./pages/04-native-federation/native-federation.md
+transition: slideup
+---
+

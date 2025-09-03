@@ -40,6 +40,6 @@ layout: section
 
 ---
 layout: image
-image: '/images/microfrontend.png'
+image: '/images/microfrontend.png' 
 ---
 
