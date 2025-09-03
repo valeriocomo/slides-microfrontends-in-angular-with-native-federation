@@ -59,3 +59,7 @@ src: ./pages/02-what-mf-are/what-mf-are.md
 transition: slideup
 ---
 
+---
+src: ./pages/03-mf-in-angular/mf-in-angular.md
+transition: slideup
+---
