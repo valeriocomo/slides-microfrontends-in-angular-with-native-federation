@@ -67,17 +67,17 @@ HTML
 Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps
 
 ---
-layout: bullets
+layout: default
 ---
 
 # Native Federation
-## Setup
+## Configuration Setup
 
 <v-clicks>
 
-* Shell Config
-* Remote Config
-* Federation Manifest 
+* Shell config
+* Remote config
+* Federation manifest 
 
 </v-clicks>
 
@@ -160,7 +160,7 @@ layout: default
 ---
 
 # Native Federation
-## Shell config
+## Federation manifest
 ### projects/shell/assets/federation.manifest.json
 
 ```json
