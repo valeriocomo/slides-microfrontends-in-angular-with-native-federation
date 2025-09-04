@@ -43,3 +43,35 @@ layout: image
 image: '/images/microfrontend.png' 
 ---
 
+---
+layout: bullets
+---
+
+# Microfrontend in Angular
+## Mental Model
+<v-clicks>
+
+* Host
+* Remote
+* Shared Dependencies
+* Version Mismatch
+ 
+</v-clicks>
+
+---
+layout: image-right
+image: '/images/webpack.png'
+---
+
+# Microfrontend in Angular
+## Module Federation
+<v-clicks>
+
+* Webpack-baked
+* Federation
+* Metadata
+* Version Mismatch handling
+* vite integration with NG CLI
+ 
+</v-clicks>
+
