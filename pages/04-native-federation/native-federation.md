@@ -75,7 +75,7 @@ layout: default
 
 <v-clicks>
 
-* Shell config
+* Host config
 * Remote config
 * Federation manifest 
 
@@ -86,7 +86,7 @@ layout: default
 ---
 
 # Native Federation
-## Shell config
+## Host config
 ### projects/shell/federation.config.js
 
 ```javascript
@@ -168,4 +168,87 @@ layout: default
   "mfe1": "http://localhost:4201/remoteEntry.json",
   "mfe2": "http://localhost:4202/remoteEntry.json"
 }
+```
+
+---
+layout: default
+---
+
+# Native Federation
+## App Setup
+
+<v-clicks>
+
+* Host init
+* Remote init
+* Router setup 
+
+</v-clicks>
+
+---
+layout: default
+---
+
+# Native Federation
+## Host init
+### projects/shell/main.ts
+
+```typescript
+import { initFederation } from '@angular-architects/native-federation';
+
+initFederation('/assets/federation.manifest.json')
+  .catch((err) => console.error(err))
+  .then((_) => import('./bootstrap'))
+  .catch((err) => console.error(err));
+```
+
+---
+layout: default
+---
+
+# Native Federation
+## Remote init
+### projects/mfe1/main.ts
+
+```typescript
+import { initFederation } from '@angular-architects/native-federation';
+
+initFederation()
+  .catch((err) => console.error(err))
+  .then((_) => import('./bootstrap'))
+  .catch((err) => console.error(err));
+```
+
+---
+layout: default
+---
+
+# Native Federation
+## Router setup
+### projects/shell/app/app.routes.ts
+
+```typescript
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { loadRemoteModule } from '@angular-architects/native-federation';
+
+export const APP_ROUTES: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    pathMatch: 'full',
+  },
+  // Loading remote mfe1
+  {
+    path: 'mfe1',
+    loadComponent: () =>
+      loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
+  },
+
+  {
+    path: '**',
+    component: NotFoundComponent,
+  },
+];
 ```

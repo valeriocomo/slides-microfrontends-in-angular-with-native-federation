@@ -70,3 +70,8 @@ src: ./pages/04-native-federation/native-federation.md
 transition: slideup
 ---
 
+---
+src: ./pages/05-advanced-use-cases/advanced-use-cases.md
+transition: slideup
+---
+
