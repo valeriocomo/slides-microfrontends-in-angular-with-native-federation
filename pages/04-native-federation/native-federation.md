@@ -65,3 +65,107 @@ HTML
 ```
 
 Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps
+
+---
+layout: bullets
+---
+
+# Native Federation
+## Setup
+
+<v-clicks>
+
+* Shell Config
+* Remote Config
+* Federation Manifest 
+
+</v-clicks>
+
+---
+layout: default
+---
+
+# Native Federation
+## Shell config
+### projects/shell/federation.config.js
+
+```javascript
+const {
+  withNativeFederation,
+  shareAll,
+} = require('@angular-architects/native-federation/config');
+
+module.exports = withNativeFederation({
+  shared: {
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    }),
+  },
+
+  skip: [
+    'rxjs/ajax',
+    'rxjs/fetch',
+    'rxjs/testing',
+    'rxjs/webSocket',
+  ],
+});
+```
+
+---
+layout: default
+---
+
+# Native Federation
+## Remote config
+### projects/mfe1/federation.config.js
+
+---
+layout: default
+---
+
+```javascript
+const {
+  withNativeFederation,
+  shareAll,
+} = require('@angular-architects/native-federation/config');
+
+module.exports = withNativeFederation({
+  name: 'mfe1',
+
+  exposes: {
+    './Component': './projects/mfe1/src/app/app.component.ts',
+  },
+
+  shared: {
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    }),
+  },
+
+  skip: [
+    'rxjs/ajax',
+    'rxjs/fetch',
+    'rxjs/testing',
+    'rxjs/webSocket',
+  ],
+});
+```
+
+---
+layout: default
+---
+
+# Native Federation
+## Shell config
+### projects/shell/assets/federation.manifest.json
+
+```json
+{
+  "mfe1": "http://localhost:4201/remoteEntry.json",
+  "mfe2": "http://localhost:4202/remoteEntry.json"
+}
+```
