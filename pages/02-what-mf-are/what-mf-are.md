@@ -51,7 +51,8 @@ layout: statement
 
 # Micro Frontends is a way to design a website or web app as a composition of features which are owned by independent teams
 ---
-layout: bullets
+layout: image-right
+image: '/images/drake-1.png'
 ---
 
 # What are Microfrontend?
@@ -67,7 +68,8 @@ layout: bullets
 </v-clicks>
 
 ---
-layout: bullets
+layout: image-right
+image: '/images/drake-2.png'
 ---
 
 # What are Microfrontend?
