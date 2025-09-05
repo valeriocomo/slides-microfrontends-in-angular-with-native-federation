@@ -125,7 +125,7 @@ layout: default
 layout: default
 ---
 
-```javascript
+```javascript {|7|9-11}
 const {
   withNativeFederation,
   shareAll,
@@ -193,7 +193,7 @@ layout: default
 ## Host init
 ### projects/shell/main.ts
 
-```typescript
+```typescript {|3|5}
 import { initFederation } from '@angular-architects/native-federation';
 
 initFederation('/assets/federation.manifest.json')
@@ -210,7 +210,7 @@ layout: default
 ## Remote init
 ### projects/mfe1/main.ts
 
-```typescript
+```typescript {|3|5}
 import { initFederation } from '@angular-architects/native-federation';
 
 initFederation()
@@ -227,7 +227,7 @@ layout: default
 ## Router setup
 ### projects/shell/app/app.routes.ts
 
-```typescript
+```typescript  {|13-17|16}
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
